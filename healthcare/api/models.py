@@ -94,7 +94,7 @@ class Patient(models.Model):
     )
     birth_date = models.DateField(blank=True)
     deceased_boolean = models.BooleanField(default=False)
-    deceased_datetime = models.DateTimeField(blank=True)
+    deceased_datetime = models.DateTimeField(null=True)
     address = models.ManyToManyField(Address, related_name="patients")
     marital_status = models.JSONField(default=dict)
     multiple_birth_boolean = models.BooleanField(default=False)
